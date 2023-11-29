@@ -1,0 +1,395 @@
+
+/*Theme Name:  Happy Birthday Template (gryadkacity.ru);
+Author Name:  Andrew Korobkov;
+Author Url: http://wa.me/79833409040 ;
+Version: 0.0.1 ;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;600;800&display=swap');
+@font-face{
+	font-family:gagalin;
+	font-style:normal;
+	font-weight:400;
+	src:local('Gagalin'),url(https://fonts.cdnfonts.com/s/57473/Gagalin-Regular.woff) format('woff')
+}
+body{
+	background: #1c8ed8!important;
+	position: relative;
+}
+.block-body{
+	overflow: hidden;
+}
+.body-overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #000;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	overflow-y: hidden;
+	z-index: 998;
+	display: none;
+	transition: all 0.3s;
+}
+.bg-block{
+	display: block!important;
+	opacity: 0.8!important;
+}
+h1,h2,h3,h4,h5,h6{
+	color: #fff !important;
+	font-family: 'Gagalin';
+}
+p{
+	color: #fff;
+	font-family: 'nunito';
+	font-weight: 200;
+	font-size: 20px;
+}
+
+/* title */
+.sub-title{
+	padding: 0 20px;
+	border-left: 10px solid orange;
+	margin-bottom: 30px;
+}
+.sub-title h2{
+	font-size: 100px;
+	color: #fff!important;
+	opacity: 1;
+}
+.sub-title h5{
+	font-size: 24px;
+	font-family: 'nunito';
+	font-weight: 600;
+	margin-bottom: -20px;
+	opacity: 0.8;
+}
+.sub-title h4{
+	font-family: 'nunito';
+	font-weight: 600;
+	font-size: 24px;
+	opacity: 0.8;
+}
+/* end title */
+/* animations */
+@keyframes zoom{
+  0% {
+    transform: scale(1.0);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+  100%{
+  	transform: scale(1.0);
+  }
+}
+@keyframes slideLeft{
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 50%;
+	}
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}
+/* end animations */
+
+/* 
+header section 
+*/
+.header-overlay{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	z-index: 1;
+	background-repeat: no-repeat!important;
+	background-size: cover!important;
+	background-position: center center!important;
+	animation: zoom;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+#header{
+	background: #1c8ed8;
+	min-height: 650px;
+}
+#header:after{
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 10px;
+	background: #fff;
+	z-index: 997;
+}
+#offer:after{
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 10px;
+	background: #fff;
+	z-index: 997;
+}
+#deal:after{
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 10px;
+	background: #fff;
+	z-index: 997;
+}
+.girl{
+	min-height: 650px;
+	width: auto;
+	background-position: bottom!important;
+	background-repeat: no-repeat!important;
+	background-size: contain!important;
+	position: relative;
+	z-index: 99;
+	display: block;
+}
+
+/* 
+end header section 
+*/
+/* 
+offer section 
+*/
+#offer{
+	min-height: 80vh;
+}
+.hb-img{
+	text-align: center;
+}
+.hb-img img{
+	max-width: 400px!important;
+}
+.btn-cta{
+	padding: 15px 30px;
+	background: #fff;
+	border: 1px solid #fff;
+	margin-bottom: 15px;
+	display: block;
+	text-align: center;
+	border-radius: 1em;
+	text-decoration: none;
+	color: #1c8ed8;
+}
+/* 
+		end offer section 
+*/
+
+/*
+		deal section
+*/
+.back-over{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.7;
+}
+.deal-item{
+	min-height: 150px;
+	background: #fff;
+	border-radius: 1em;
+	overflow: hidden;
+	margin-bottom: 30px;
+	position: relative;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.deal-heading{
+	min-height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: orange;
+	padding: 15px;
+}
+.deal-heading h5{
+	color: #fff !important;
+	margin-bottom: 0;
+	font-size: 35px;
+}
+.deal-heading p{
+	color: #fff !important;
+	margin-bottom: 0;
+	font-weight: 600;
+}
+.deal-list{
+	position: relative;
+	z-index: 22;
+	padding: 20px 35px;
+}
+.deal-price{
+	min-height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: orange;
+	padding: 15px;
+}
+.deal-price h5{
+	color: #fff !important;
+	margin-bottom: 0;
+	font-size: 35px;
+}
+.deal-list ul{
+	list-style: none;
+	margin-bottom: 0;
+	padding: 0;
+}
+.deal-list ul li{
+	font-size: 18px;
+	vertical-align: center;
+}
+.deal-list>ul>li:before{
+	content: '';
+	display: inline-block;
+	align-items: center;
+	justify-content: center;
+	margin-right: 10px;
+	background: url('https://upload.wikimedia.org/wikipedia/commons/8/8b/Eo_circle_green_white_checkmark.svg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	width: 20px;
+	height: 20px;
+}
+.unavailable:before{
+	content: '';
+	display: inline-block;
+	align-items: center;
+	justify-content: center;
+	margin-right: 10px;
+	background: url('https://upload.wikimedia.org/wikipedia/commons/8/8b/Eo_circle_green_white_checkmark.svg');
+	filter: grayscale(100%);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	width: 20px;
+	height: 20px;
+}
+.unavailable{
+	color: #dedede!important;
+	text-decoration: line-through;
+
+}
+/*
+		end deal section
+*/
+
+
+/*
+		benefit section
+*/
+
+.benefit-list{
+	padding: 0;
+	list-style: none;
+}
+.benefit-item{
+	margin-bottom: 30px;
+}
+.benefit-item:before{
+	content: attr(data-count);
+	font-size: 102px;
+	color: #dedede;
+	opacity: 0.6;
+	margin-right: 15px;
+	font-family: 'gagalin';
+}
+.benefit-content p{
+	margin-bottom: 0;
+	font-weight: 600;
+}
+/*
+		end benefit section
+*/
+/* 
+		contact section 
+*/
+#contact {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    min-height: 550px;
+    background: #fff;
+    bottom: 0;
+    border-radius: 1em 1em 0 0;
+    margin-bottom: -500px;
+    transition: all 0.3s;
+    animation: bounce 2s ease infinite;
+}
+.show{
+	margin-bottom: 0 !important;
+	animation: none!important;
+}
+/* 
+end contact section 
+
+/* mobile media */
+@media(max-width: 768px){
+	.sub-title h2{
+		font-size: 45px;
+		margin-bottom: 0;
+	}
+	.sub-title h5{
+		font-size: 16px;
+		margin-bottom: -5px;
+		font-weight: 600;
+	}
+	.sub-title h4{
+		font-family: 'nunito';
+		font-weight: 600;
+		font-size: 16px;
+	}
+	p{
+		font-size: 16px;
+	}
+	.benefit-list li .d-flex{
+	justify-content: center; !important;;
+	}
+	.benefit-list li{
+		margin-bottom: 20px;
+	}
+	.benefit-list li .row{
+		justify-content: center;
+	}
+	.list-image{
+		width: 150px !important;
+		height: 150px;
+		border-radius: 100%;
+		background: linear-gradient(#fff,#000);
+		overflow: hidden;
+		display: block;
+	}
+	.benefit-item:before{
+		content: attr(data-count);
+		font-size: 62px;
+		color: #dedede;
+		opacity: 0.7;
+		margin-right: 15px;
+	}
+	label{
+		font-size: 10px;
+}
+}
